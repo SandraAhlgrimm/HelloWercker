@@ -16,3 +16,5 @@ SpringBoot, Gradle, Docker, Wercker
         https://spring.io/guides/gs/gradle/
 
         https://spring.io/guides/gs/spring-boot-docker/
+        
+        wercker.yml https://github.com/mihkels/box-java8-oracle
