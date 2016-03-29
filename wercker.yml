@@ -6,11 +6,11 @@ build:
     steps:
         - script:
             name: Show base information
-                code: |
-                    gradle -v
-                    java -version
-                    javac -version
+            code: |
+                gradle -v
+                java -version
+                javac -version
         - script:
             name: Run gradle
-                code: |
-                    gradle --full-stackstrace -q --poject-cache-dir=$WERCKER_CACHE_DIR assamble
+            code: |
+                gradle --full-stackstrace -q --poject-cache-dir=$WERCKER_CACHE_DIR assamble
