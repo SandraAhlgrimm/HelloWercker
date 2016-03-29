@@ -1,13 +1,16 @@
-box: mihkels/java8-oracle@0.0.1
+box:
+    id: java8:alpine
+    env:
+        GRADLE_USER_HOME: $WERCKER_CACHE_DIR
 build:
-  steps:
-    - script:
-      name: Show base information
-        code: |
-          gradle -v
-          java -version
-          javac -version
-    -script:
-      name: Run gradle
-        code: |
-          gradle --full-stackstrace -q --poject-cache-dir=$WERCKER_CACHE_DIR assamble
+    steps:
+        - script:
+            name: Show base information
+                code: |
+                    gradle -v
+                    java -version
+                    javac -version
+        - script:
+            name: Run gradle
+                code: |
+                    gradle --full-stackstrace -q --poject-cache-dir=$WERCKER_CACHE_DIR assamble
