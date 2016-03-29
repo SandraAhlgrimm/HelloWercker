@@ -5,6 +5,8 @@ SpringBoot, Gradle, Docker, Wercker
 
 ## runs with
 
+        ./gradlew build buildDocker
+        
        docker run -p 8080:8080 name
 
 
