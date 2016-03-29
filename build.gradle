@@ -1,5 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'application'
 
 mainClassName = 'hello.HelloWorld'
@@ -30,4 +29,8 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
+
 // end::wrapper[]
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
