@@ -1,5 +1,5 @@
 box:
-    id: java8:alpine
+    id: java:8u66-jdk
     env:
         GRADLE_USER_HOME: $WERCKER_CACHE_DIR
 build:
