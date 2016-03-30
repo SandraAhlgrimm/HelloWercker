@@ -1,7 +1,7 @@
 # docker box definition
 box: java
 
-# defining the dev pipeline
+# define the dev pipeline
 dev:
   steps:
     - script:
@@ -10,9 +10,9 @@ dev:
         ./gradlew bootRun
 # Build definition
 build:
-  # The steps that will be executed on build
+  # dockersteps will be executed on build
   steps:
-    # A step that executes `gradle build` command
+    # execute `gradle build` command
     - script:
         name: gradle build
         code: |
@@ -23,4 +23,4 @@ build:
       password: $DOCKER_PASSWORD
       repository: sandra/hello_world
       ports: 8080
-      cmd: java -jar gs-spring-boot-docker-0.1.0.jar
+      cmd: java -jar build/libs/gs-spring-boot-docker-0.1.0.jar
