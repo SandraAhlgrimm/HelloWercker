@@ -17,3 +17,11 @@ build:
         name: gradle build
         code: |
           ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
+    # dockerize it
+    - internal/docker-push:
+      username: $DOCKER_USER
+      password: $DOCKER_PASS
+      repository: sandra/hello_world
+      ports: 8080
+      entrypoint: ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+      cmd: bin/bash
