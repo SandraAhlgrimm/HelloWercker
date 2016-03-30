@@ -1,15 +1,19 @@
-box:
-    id: java:8u66-jdk
-    env:
-        GRADLE_USER_HOME: $WERCKER_CACHE_DIR
+# docker box definition
+box: java
+
+# defining the dev pipeline
+dev:
+  steps:
+    - script:
+      name: gradle bootRun
+      code: |
+        ./gradlew bootRun
+# Build definition
 build:
-    steps:
-        - script:
-            name: Show base information
-            code: |
-                java -version
-                javac -version
-        - script:
-            name: Run gradle
-            code: |
-                ./gradlew --full-stacktrace clean assemble
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `gradle build` command
+    - script:
+        name: gradle build
+        code: |
+          ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
