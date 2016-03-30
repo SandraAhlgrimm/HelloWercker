@@ -5,12 +5,12 @@ box:
 build:
     steps:
         - script:
+            name: Show base information and install gradle
             # Install Gradle
-            sudo add-apt-repository ppa:cwchien/gradle -y
-            sudo apt-get update
-            sudo apt-get install gradle -y
-            name: Show base information
             code: |
+                sudo add-apt-repository ppa:cwchien/gradle -y
+                sudo apt-get update
+                sudo apt-get install gradle -y
                 gradle -v
                 java -version
                 javac -version
