@@ -1,16 +1,10 @@
-box:
-    id: java:8u66-jdk
-    env:
-        GRADLE_USER_HOME: $WERCKER_CACHE_DIR
+box: mihkels/java8-oracle@0.0.1
+
 build:
     steps:
         - script:
-            name: Show base information and install gradle
-            # Install Gradle
+            name: Show base information
             code: |
-                sudo add-apt-repository ppa:cwchien/gradle -y
-                sudo apt-get update
-                sudo apt-get install gradle -y
                 gradle -v
                 java -version
                 javac -version
