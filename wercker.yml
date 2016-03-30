@@ -12,4 +12,4 @@ build:
         - script:
             name: Run gradle
             code: |
-                ./gradlew --full-stacktrace clean check
+                ./gradlew --full-stacktrace clean assemble
