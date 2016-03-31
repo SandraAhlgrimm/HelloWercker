@@ -29,4 +29,4 @@ build:
       password: $DOCKER_PASSWORD
       repository: sandra/hello_world
       ports: 8080
-      cmd: docker exec java -jar ./build/libs/gs-spring-boot-docker-0.1.0.jar
+      cmd: docker exec java -jar pipeline/build/libs/gs-spring-boot-docker-0.1.0.jar
