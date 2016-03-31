@@ -23,7 +23,8 @@ To check the Application in your Browser you can find the IP the docker machine 
 
         docker-machine ip
       
-
+        ![Screenshot](/screenshot.png)
+        
 ## Tutorials
 
 
