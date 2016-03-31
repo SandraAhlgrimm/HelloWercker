@@ -5,12 +5,24 @@ SpringBoot, Gradle, Docker, Wercker
 
 
 
-## runs with
+## runs with Dockerfile
 
         ./gradlew build buildDocker
         
        docker run -p 8080:8080 name
 
+
+## runs with wercker
+        add this repository to http://app.wercker.com/
+            save your docker login in the project settings/ Environment variables as DOCKER_USER and DOCKER_PASSWORD
+            the rest is wercker doing for you
+        pull the latest docker image with e.g.: docker pull sandra/hello_world:latest
+        run the dockerfile: docker run -p 8080:8080 sandra/hello_world:latest
+        
+To check the Application in your Browser you can find the IP the docker machine is currently running at with
+
+        docker-machine ip
+      
 
 ## Tutorials
 
