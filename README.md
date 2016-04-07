@@ -1,5 +1,5 @@
 # hello_world
-## SpringBoot, Gradle, Docker, Wercker
+#### SpringBoot, Gradle, Docker, Wercker
 
 This project shows the use of Springboot and Gradle. You can build the project either on your local machine with docker (Step A) or you use wercker as your CI and let them build your application for you (Step B).
 You can also use the code to compare both ways.
