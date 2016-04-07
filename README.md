@@ -1,18 +1,21 @@
 # hello_world
-SpringBoot, Gradle, Docker, Wercker
+## SpringBoot, Gradle, Docker, Wercker
+
+This project shows the use of Springboot and Gradle. You can build the project either on your local machine with docker (Step A) or you use wercker as your CI and let them build your application for you (Step B).
+You can also use the code to compare both ways.
 
 [![wercker status](https://app.wercker.com/status/f2e4c13fd194cde02c47337ea5da6baa/m "wercker status")](https://app.wercker.com/project/bykey/f2e4c13fd194cde02c47337ea5da6baa)
 
 
 
-## Runs with Dockerfile
+## Step A: Runs with Dockerfile
 
         ./gradlew build buildDocker
         
        docker run -p 8080:8080 name
 
 
-## Runs with wercker
+## Step B: Runs with wercker
 
         add this repository to http://app.wercker.com/
             save your docker login in the project settings/ Environment variables as DOCKER_USER and DOCKER_PASSWORD
