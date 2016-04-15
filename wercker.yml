@@ -17,10 +17,16 @@ build:
         name: gradle build
         code: |
           ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
+    # rename jar-file to make it findable in the next step (docker-push)
+    - script:
+        name: erase version number from jar file name
+        code: |
+          cd /pipeline/source/build/libs/
+          mv gs-spring-boot-docker-*.jar gs-spring-boot-docker.jar
     # dockerize it: It is important that you use the absolute path as wercker path != docker path
     - internal/docker-push:
       username: $DOCKER_USER
       password: $DOCKER_PASSWORD
       repository: sandra/hello_world
       ports: 8080
-      cmd: java -jar /pipeline/source/build/libs/gs-spring-boot-docker-${jar.version}.jar
+      cmd: java -jar /pipeline/source/build/libs/gs-spring-boot-docker.jar
