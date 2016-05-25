@@ -23,16 +23,6 @@ You can also use the code to compare both ways.
         pull the latest docker image with e.g.: docker pull sandra/hello_world:latest
         run the dockerfile: docker run -p 8080:8080 sandra/hello_world:latest
         
-### Use Regex in your Docker Step
-
-If you're facing the problem, that you want to build a versioned jar-file (outcome of your gradle build) just rename the jar-file and exclude the version number one step ahead.
-
-        - script:
-        name: erase version number from jar file name
-        code: |
-          cd /pipeline/source/build/libs/
-          mv gs-spring-boot-docker-*.jar gs-spring-boot-docker.jar
-        
 ## Check the Output in your Browser
 
 To check the Application in your Browser like that:  
