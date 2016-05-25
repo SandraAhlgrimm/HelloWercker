@@ -59,3 +59,7 @@ task wrapper(type: Wrapper) {
 }
 
 // end::wrapper[]
+task showArgs << {
+    println "$NEW_RELIC"
+}
+

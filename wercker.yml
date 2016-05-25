@@ -25,9 +25,9 @@ build:
           mv gs-spring-boot-docker-*.jar gs-spring-boot-docker.jar
     # dockerize it: It is important that you use the absolute path as wercker path != docker path
     - internal/docker-push:
-      username: $DOCKER_USER
-      password: $DOCKER_PASSWORD
+      username: $USER
+      password: $PASSWORD
       repository: sandra/hello_world
       ports: 8080
-      env: "NEW_RELIC="$NEW_RELIC
+      env: $NEW_RELIC
       cmd: java -jar /pipeline/source/build/libs/gs-spring-boot-docker.jar

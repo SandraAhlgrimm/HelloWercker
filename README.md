@@ -7,7 +7,6 @@ You can also use the code to compare both ways.
 [![wercker status](https://app.wercker.com/status/f2e4c13fd194cde02c47337ea5da6baa/m "wercker status")](https://app.wercker.com/project/bykey/f2e4c13fd194cde02c47337ea5da6baa)
 
 
-
 ## Step A: Runs with Dockerfile
 
         ./gradlew build buildDocker
@@ -25,7 +24,7 @@ You can also use the code to compare both ways.
         
 ## Check the Output in your Browser
 
-To check the Application in your Browser like that:  
+To check the Application in your Browser like that:
 ![Screenshot](screenshot.png?raw=true "Title")
 
 find the IP the docker machine is currently running at with
