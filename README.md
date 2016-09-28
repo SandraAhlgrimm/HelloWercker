@@ -29,7 +29,7 @@ To check the Application in your Browser like that:
 
 find the IP the docker machine is currently running at with
 
-        docker-machine ip
+        docker inspect 'containerID'
         
 ## Used Tutorials
 These are the Tutorials I used and I would highly recommend:
